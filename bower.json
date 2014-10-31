@@ -1,0 +1,40 @@
+{
+  "name": "spdx-license-identifiers",
+  "version": "1.0.0",
+  "description": "A list of SPDX license identifiers",
+  "keywords": [
+    "spdx",
+    "license",
+    "licenses",
+    "id",
+    "identifier",
+    "identifiers",
+    "json",
+    "array",
+    "oss"
+  ],
+  "main": "spdx-license-identifiers.js",
+  "homepage": "https://github.com/shinnn/spdx-license-identifiers",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shinnn/spdx-license-identifiers.git"
+  },
+  "authors": [
+    {
+      "name": "Shinnosuke Watanabe",
+      "url": "https://github.com/shinnn"
+    }
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.yml",
+    "bower_components",
+    "coverage",
+    "node_modules",
+    "test.js",
+    "spdx-license-identifiers-cjs.js",
+    "package.json",
+    "component.json"
+  ]
+}

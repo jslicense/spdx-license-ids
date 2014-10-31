@@ -1,0 +1,25 @@
+{
+  "name": "spdx-license-identifiers",
+  "version": "1.0.0",
+  "description": "A list of SPDX license identifiers",
+  "keywords": [
+    "spdx",
+    "license",
+    "licenses",
+    "id",
+    "identifier",
+    "identifiers",
+    "json",
+    "array",
+    "oss"
+  ],
+  "repository": "shinnn/spdx-license-identifiers",
+  "main": "spdx-license-identifiers-cjs.js",
+  "scripts": [
+    "spdx-license-identifiers-cjs.js"
+  ],
+  "json": [
+    "spdx-license-identifiers.json"
+  ],
+  "license": "MIT"
+}
