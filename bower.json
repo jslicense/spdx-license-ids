@@ -28,7 +28,6 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "*.yml",
     "bower_components",
     "coverage",
     "node_modules",
