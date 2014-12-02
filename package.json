@@ -23,7 +23,6 @@
   "main": "spdx-license-identifiers-cjs.js",
   "files": [
     "spdx-license-identifiers-cjs.js",
-    "spdx-license-identifiers.json",
     "LICENSE"
   ],
   "keywords": [

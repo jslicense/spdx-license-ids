@@ -1,6 +1,5 @@
 {
   "name": "spdx-license-identifiers",
-  "version": "1.0.0",
   "description": "A list of SPDX license identifiers",
   "keywords": [
     "spdx",
@@ -28,6 +27,7 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
+    "*.json",
     "bower_components",
     "coverage",
     "node_modules",

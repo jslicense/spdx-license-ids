@@ -18,8 +18,8 @@
   "scripts": [
     "spdx-license-identifiers-cjs.js"
   ],
-  "json": [
-    "spdx-license-identifiers.json"
+  "files": [
+    "LICENSE"
   ],
   "license": "MIT"
 }
