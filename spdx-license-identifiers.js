@@ -2,7 +2,6 @@
  * spdx-license-identifiers | MIT (c) Shinnosuke Watanabe
  * https://github.com/shinnn/spdx-license-identifiers
 */
-'use strict';
 window.spdxLicenseIdentifiers = [
   'Glide',
   'Abstyles',
