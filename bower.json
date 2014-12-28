@@ -28,12 +28,9 @@
   "ignore": [
     "**/.*",
     "*.json",
+    "*.js",
     "bower_components",
     "coverage",
-    "node_modules",
-    "test.js",
-    "spdx-license-identifiers-cjs.js",
-    "package.json",
-    "component.json"
+    "node_modules"
   ]
 }
