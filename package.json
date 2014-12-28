@@ -40,10 +40,10 @@
   ],
   "devDependencies": {
     "each-async": "^1.1.0",
-    "eslint": "^0.10.0",
-    "istanbul": "^0.3.2",
+    "eslint": "^0.10.2",
+    "istanbul": "^0.3.5",
     "istanbul-coveralls": "^1.0.1",
-    "jscs": "^1.8.1",
+    "jscs": "^1.9.0",
     "require-bower-files": "^1.0.0",
     "rm-rf": "^0.1.0",
     "spdx-license-list": "^1.1.0",
@@ -52,6 +52,8 @@
     "tiny-npm-license": "^1.0.0"
   },
   "jscsConfig": {
-    "preset": "google"
+    "preset": "google",
+    "requireBlocksOnNewline": true,
+    "validateLineBreaks": "LF"
   }
 }
