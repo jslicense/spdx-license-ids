@@ -6,10 +6,10 @@ A list of [SPDX license](http://spdx.org/licenses/) identifiers
 
 ## Use as a JavaScript Library
 
-[![Build Status](https://travis-ci.org/shinnn/spdx-license-identifiers.svg?branch=master)](https://travis-ci.org/shinnn/spdx-license-identifiers)
 [![NPM version](https://badge.fury.io/js/spdx-license-identifiers.svg)](https://www.npmjs.org/package/spdx-license-identifiers)
 [![Bower version](https://badge.fury.io/bo/spdx-license-identifiers.svg)](https://github.com/shinnn/spdx-license-identifiers/releases)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/spdx-license-identifiers.svg)](https://coveralls.io/r/shinnn/spdx-license-identifiers)
+[![Build Status](https://travis-ci.org/shinnn/spdx-license-identifiers.svg?branch=master)](https://travis-ci.org/shinnn/spdx-license-identifiers)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/spdx-license-identifiers.svg?style=flat)](https://coveralls.io/r/shinnn/spdx-license-identifiers)
 [![devDependency Status](https://david-dm.org/shinnn/spdx-license-identifiers/dev-status.svg)](https://david-dm.org/shinnn/spdx-license-identifiers#info=devDependencies)
 
 ### Installation
@@ -54,6 +54,6 @@ spdxLicenseIdentifiers; //=> ['Glide', 'Abstyles', 'AFL-1.1', ... ]
 
 ## License
 
-Copyright (c) 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
