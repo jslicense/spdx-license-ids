@@ -22,8 +22,7 @@
   ],
   "main": "spdx-license-identifiers-cjs.js",
   "files": [
-    "spdx-license-identifiers-cjs.js",
-    "LICENSE"
+    "spdx-license-identifiers-cjs.js"
   ],
   "keywords": [
     "spdx",
@@ -40,15 +39,15 @@
   ],
   "devDependencies": {
     "each-async": "^1.1.1",
-    "eslint": "^0.11.0",
-    "istanbul": "^0.3.5",
+    "eslint": "^0.15.1",
+    "istanbul": "^0.3.6",
     "istanbul-coveralls": "^1.0.1",
-    "jscs": "^1.10.0",
+    "jscs": "^1.11.3",
     "require-bower-files": "^2.0.0",
     "rm-rf": "^0.1.0",
     "spdx-license-list": "^1.1.0",
     "stringify-object": "^1.0.0",
-    "tape": "^3.0.3",
+    "tape": "^3.5.0",
     "tiny-npm-license": "^1.0.0"
   },
   "jscsConfig": {
