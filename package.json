@@ -1,6 +1,6 @@
 {
   "name": "spdx-license-ids",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A list of SPDX license identifiers",
   "repository": "shinnn/spdx-license-ids",
   "author": {
