@@ -1,5 +1,5 @@
 {
-  "name": "spdx-license-identifiers",
+  "name": "spdx-license-ids",
   "description": "A list of SPDX license identifiers",
   "keywords": [
     "spdx",
@@ -12,11 +12,11 @@
     "array",
     "oss"
   ],
-  "main": "spdx-license-identifiers.js",
-  "homepage": "https://github.com/shinnn/spdx-license-identifiers",
+  "main": "spdx-license-ids-browser.js",
+  "homepage": "https://github.com/shinnn/spdx-license-ids",
   "repository": {
     "type": "git",
-    "url": "git://github.com/shinnn/spdx-license-identifiers.git"
+    "url": "git://github.com/shinnn/spdx-license-ids.git"
   },
   "authors": [
     {
@@ -24,7 +24,7 @@
       "url": "https://github.com/shinnn"
     }
   ],
-  "license": "MIT",
+  "license": "Unlicense",
   "ignore": [
     "**/.*",
     "*.json",

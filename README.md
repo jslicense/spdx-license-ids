@@ -1,59 +1,55 @@
-# spdx-license-identifiers
+# spdx-license-ids
 
 A list of [SPDX license](http://spdx.org/licenses/) identifiers
 
-[**Download JSON**](https://raw.githubusercontent.com/shinnn/spdx-license-identifiers/master/spdx-license-identifiers.json)
+[**Download JSON**](https://raw.githubusercontent.com/shinnn/spdx-license-ids/master/spdx-license-ids.json)
 
 ## Use as a JavaScript Library
 
-[![NPM version](https://badge.fury.io/js/spdx-license-identifiers.svg)](https://www.npmjs.org/package/spdx-license-identifiers)
-[![Bower version](https://badge.fury.io/bo/spdx-license-identifiers.svg)](https://github.com/shinnn/spdx-license-identifiers/releases)
-[![Build Status](https://travis-ci.org/shinnn/spdx-license-identifiers.svg?branch=master)](https://travis-ci.org/shinnn/spdx-license-identifiers)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/spdx-license-identifiers.svg?style=flat)](https://coveralls.io/r/shinnn/spdx-license-identifiers)
-[![devDependency Status](https://david-dm.org/shinnn/spdx-license-identifiers/dev-status.svg)](https://david-dm.org/shinnn/spdx-license-identifiers#info=devDependencies)
+[![NPM version](https://img.shields.io/npm/v/spdx-license-ids.svg)](https://www.npmjs.org/package/spdx-license-ids)
+[![Bower version](https://img.shields.io/bower/v/spdx-license-ids.svg)](https://github.com/shinnn/spdx-license-ids/releases)
+[![Build Status](https://travis-ci.org/shinnn/spdx-license-ids.svg?branch=master)](https://travis-ci.org/shinnn/spdx-license-ids)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/spdx-license-ids.svg)](https://coveralls.io/r/shinnn/spdx-license-ids)
+[![devDependency Status](https://david-dm.org/shinnn/spdx-license-ids/dev-status.svg)](https://david-dm.org/shinnn/spdx-license-ids#info=devDependencies)
 
 ### Installation
 
 #### Package managers
 
-##### [npm](https://www.npmjs.org/)
+##### [npm](https://www.npmjs.com/)
 
 ```sh
-npm install spdx-license-identifiers
+npm install spdx-license-ids
 ```
 
 ##### [bower](http://bower.io/)
 
 ```sh
-bower install spdx-license-identifiers
+bower install spdx-license-ids
 ```
 
 ##### [Duo](http://duojs.org/)
 
 ```javascript
-var spdxLicenseIdentifiers = require('shinnn/spdx-license-identifiers');
+var spdxLicenseIds = require('shinnn/spdx-license-ids');
 ```
 
 #### Standalone
 
-[Download the script file directly.](https://raw.githubusercontent.com/shinnn/spdx-license-identifiers/master/spdx-license-identifiers.js)
+[Download the script file directly.](https://raw.githubusercontent.com/shinnn/spdx-license-ids/master/spdx-license-ids-browser.js)
 
 ### API
 
-#### spdxLicenseIdentifiers
+#### spdxLicenseIds
 
 Type: `Array` of `String`
 
 It returns an array of SPDX license identifiers.
 
 ```javascript
-var spdxLicenseIdentifiers = require('spdx-license-identifiers');
-
-spdxLicenseIdentifiers; //=> ['Glide', 'Abstyles', 'AFL-1.1', ... ]
+var spdxLicenseIds = require('spdx-license-ids'); //=> ['Glide', 'Abstyles', 'AFL-1.1', ... ]
 ```
 
 ## License
 
-Copyright (c) [Shinnosuke Watanabe](https://github.com/shinnn)
-
-Licensed under [the MIT License](./LICENSE).
+[The Uicense](./LICENSE).

@@ -1,41 +1,34 @@
 'use strict';
 
-var assert = require('assert');
-var fs = require('fs');
+const assert = require('assert');
+const fs = require('fs');
 
-var eachAsync = require('each-async');
-var rmrf = require('rm-rf');
-var stringifyObject = require('stringify-object');
+const eachAsync = require('each-async');
+const rmrf = require('rm-rf');
+const stringifyObject = require('stringify-object');
 
-var pkg = require('./package.json');
-var banner = require('tiny-npm-license')(pkg);
+const pkg = require('./package.json');
 
-var array = Object.keys(require('spdx-license-list'));
-var stringifiedArray = stringifyObject(array, {indent: '  '}) + ';';
-
-var files = [
+let array = Object.keys(require('spdx-license-list'));
+let files = [
   {
-    path: 'spdx-license-identifiers.json',
+    path: pkg.main,
     contents: JSON.stringify(array, null, '  ')
   },
   {
-    path: pkg.main,
-    contents: banner + 'module.exports = ' + stringifiedArray
-  },
-  {
     path: require('./bower.json').main,
-    contents: banner + 'window.spdxLicenseIdentifiers = ' + stringifiedArray
+    contents: `window.spdxLicenseIds = ${stringifyObject(array, {indent: '  '})};`
   }
 ];
 
-rmrf(pkg.name + '*', function(err) {
-  assert.ifError(err);
+rmrf(pkg.name + '*', removeErr => {
+  assert.ifError(removeErr);
 
-  eachAsync(files, function(file, index, next) {
+  eachAsync(files, (file, index, next) => {
     console.log('Writing... ' + file.path);
     fs.writeFile(file.path, file.contents + '\n', next);
-  }, function(err) {
-    assert.ifError(err);
+  }, writeErr => {
+    assert.ifError(writeErr);
     console.log('Build completed.');
   });
 });

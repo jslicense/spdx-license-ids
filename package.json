@@ -1,28 +1,29 @@
 {
-  "name": "spdx-license-identifiers",
-  "version": "1.1.0",
+  "name": "spdx-license-ids",
+  "version": "0.0.0",
   "description": "A list of SPDX license identifiers",
-  "repository": "shinnn/spdx-license-identifiers",
+  "repository": "shinnn/spdx-license-ids",
   "author": {
     "name": "Shinnosuke Watanabe",
     "url": "https://github.com/shinnn"
   },
   "scripts": {
-    "build": "node build.js",
-    "pretest": "${npm_package_scripts_build} && eslint *.js && jscs *.js",
-    "test": "node test.js",
-    "coverage": "istanbul cover test.js",
+    "build": "node --harmony_arrow_functions build.js",
+    "lint": "eslint --config node_modules/@shinnn/eslintrc/rc.json --ignore-path .gitignore .",
+    "pretest": "${npm_package_scripts_build} && ${npm_package_scripts_lint}",
+    "test": "node --harmony_arrow_functions test.js",
+    "coverage": "node --harmony_arrow_functions node_modules/.bin/istanbul cover test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
   "licenses": [
     {
-      "type": "MIT",
-      "url": "https://github.com/shinnn/spdx-license-identifiers/blob/master/LICENSE"
+      "type": "Unlicense",
+      "url": "https://github.com/shinnn/spdx-license-ids/blob/master/LICENSE"
     }
   ],
-  "main": "spdx-license-identifiers-cjs.js",
+  "main": "spdx-license-ids.json",
   "files": [
-    "spdx-license-identifiers-cjs.js"
+    "spdx-license-ids.json"
   ],
   "keywords": [
     "spdx",
@@ -38,21 +39,15 @@
     "client-side"
   ],
   "devDependencies": {
+    "@shinnn/eslintrc": "^1.0.0",
     "each-async": "^1.1.1",
-    "eslint": "^0.15.1",
-    "istanbul": "^0.3.6",
-    "istanbul-coveralls": "^1.0.1",
-    "jscs": "^1.11.3",
+    "eslint": "^0.20.0",
+    "istanbul": "^0.3.13",
+    "istanbul-coveralls": "^1.0.2",
     "require-bower-files": "^2.0.0",
     "rm-rf": "^0.1.0",
-    "spdx-license-list": "^1.1.0",
-    "stringify-object": "^1.0.0",
-    "tape": "^3.5.0",
-    "tiny-npm-license": "^1.0.0"
-  },
-  "jscsConfig": {
-    "preset": "google",
-    "requireBlocksOnNewline": true,
-    "validateLineBreaks": "LF"
+    "spdx-license-list": "^2.0.0",
+    "stringify-object": "^1.0.1",
+    "tape": "^4.0.0"
   }
 }
