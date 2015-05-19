@@ -15,12 +15,7 @@
     "coverage": "node --harmony_arrow_functions node_modules/.bin/istanbul cover test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
-  "licenses": [
-    {
-      "type": "Unlicense",
-      "url": "https://github.com/shinnn/spdx-license-ids/blob/master/LICENSE"
-    }
-  ],
+  "license": "Unlicense",
   "main": "spdx-license-ids.json",
   "files": [
     "spdx-license-ids.json"
