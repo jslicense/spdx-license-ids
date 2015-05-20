@@ -37,11 +37,11 @@
     "@shinnn/eslintrc": "^1.0.0",
     "each-async": "^1.1.1",
     "eslint": "^0.20.0",
+    "got": "^3.2.0",
     "istanbul": "^0.3.13",
     "istanbul-coveralls": "^1.0.2",
     "require-bower-files": "^2.0.0",
     "rm-rf": "^0.1.0",
-    "spdx-license-list": "^2.0.0",
     "stringify-object": "^1.0.1",
     "tape": "^4.0.0"
   }
