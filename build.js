@@ -2,15 +2,15 @@
 
 const assert = require('assert');
 const fs = require('fs');
-const got = require('got');
 
 const eachAsync = require('each-async');
+const got = require('got');
 const rmrf = require('rm-rf');
 const stringifyObject = require('stringify-object');
 
 const pkg = require('./package.json');
 
-got('http://spdx.org/licenses/licenses.json', {json: true}, (gotError, json) => {
+got('https://spdx.org/licenses/licenses.json', {json: true}, (gotError, json) => {
   assert.ifError(gotError);
 
   let array = json.licenses.map(license => license.licenseId);
