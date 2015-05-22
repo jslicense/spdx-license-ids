@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "A list of SPDX license identifiers",
   "repository": "shinnn/spdx-license-ids",
-  "author": {
-    "name": "Shinnosuke Watanabe",
-    "url": "https://github.com/shinnn"
-  },
+  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
     "build": "node --harmony_arrow_functions build.js",
     "lint": "eslint --config node_modules/@shinnn/eslintrc/rc.json --ignore-path .gitignore .",
@@ -36,13 +33,13 @@
   "devDependencies": {
     "@shinnn/eslintrc": "^1.0.0",
     "each-async": "^1.1.1",
-    "eslint": "^0.20.0",
+    "eslint": "^0.21.2",
     "got": "^3.2.0",
-    "istanbul": "^0.3.13",
+    "istanbul": "^0.3.14",
     "istanbul-coveralls": "^1.0.2",
     "require-bower-files": "^2.0.0",
     "rm-rf": "^0.1.0",
-    "stringify-object": "^1.0.1",
+    "stringify-object": "^2.0.0",
     "tape": "^4.0.0"
   }
 }
