@@ -33,13 +33,13 @@
   "devDependencies": {
     "@shinnn/eslintrc": "^1.0.0",
     "each-async": "^1.1.1",
-    "eslint": "^0.21.2",
-    "got": "^3.2.0",
-    "istanbul": "^0.3.14",
-    "istanbul-coveralls": "^1.0.2",
+    "eslint": "^0.24.0",
+    "got": "^3.3.0",
+    "istanbul": "^0.3.17",
+    "istanbul-coveralls": "^1.0.3",
     "require-bower-files": "^2.0.0",
-    "rm-rf": "^0.1.0",
-    "stringify-object": "^2.0.0",
+    "rimraf": "^2.4.1",
+    "stringify-object": "^2.2.0",
     "tape": "^4.0.0"
   }
 }

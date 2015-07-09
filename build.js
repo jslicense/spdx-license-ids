@@ -5,7 +5,7 @@ const fs = require('fs');
 
 const eachAsync = require('each-async');
 const got = require('got');
-const rmrf = require('rm-rf');
+const rimraf = require('rimraf');
 const stringifyObject = require('stringify-object');
 
 const pkg = require('./package.json');
@@ -25,7 +25,7 @@ got('https://spdx.org/licenses/licenses.json', {json: true}, (gotError, json) =>
     }
   ];
 
-  rmrf(pkg.name + '*', removeErr => {
+  rimraf(pkg.name + '*', removeErr => {
     assert.ifError(removeErr);
 
     eachAsync(files, (file, index, next) => {
