@@ -13,16 +13,14 @@
     "oss"
   ],
   "main": "spdx-license-ids-browser.js",
+  "moduleType": "globals",
   "homepage": "https://github.com/shinnn/spdx-license-ids",
   "repository": {
     "type": "git",
     "url": "git://github.com/shinnn/spdx-license-ids.git"
   },
   "authors": [
-    {
-      "name": "Shinnosuke Watanabe",
-      "url": "https://github.com/shinnn"
-    }
+    "Shinnosuke Watanabe (https://github.com/shinnn)"
   ],
   "license": "Unlicense",
   "ignore": [
