@@ -1,10 +1,11 @@
 sudo: false
 git:
-  depth: 2
+  depth: 1
 language: node_js
-node_js:
-  - iojs
+node_js: stable
 after_script:
-  - npm run-script coveralls
+  - npm install istanbul-coveralls
+  - npm run-script coverage
+  - node node_modules/.bin/istanbul-coveralls
 notifications:
   email: false

@@ -36,7 +36,6 @@
     "eslint": "^0.24.0",
     "got": "^3.3.0",
     "istanbul": "^0.3.17",
-    "istanbul-coveralls": "^1.0.3",
     "require-bower-files": "^2.0.0",
     "rimraf": "^2.4.1",
     "stringify-object": "^2.2.0",
