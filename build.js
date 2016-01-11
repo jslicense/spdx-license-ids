@@ -13,7 +13,9 @@ const pkg = require('./package.json');
 got('https://spdx.org/licenses/licenses.json', {json: true}, (gotError, json) => {
   assert.ifError(gotError);
 
-  let array = json.licenses.map(license => license.licenseId);
+  let array = json.licenses
+    .filter(license => !license.licenseId.endsWith('+'))
+    .map(license => license.licenseId);
   let files = [
     {
       path: pkg.main,
