@@ -5,11 +5,11 @@
   "repository": "shinnn/spdx-license-ids",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "build": "node --harmony_arrow_functions build.js",
     "lint": "eslint --config node_modules/@shinnn/eslintrc/rc.json --ignore-path .gitignore .",
+    "build": "node --strong_mode --harmony_destructuring build.js",
     "pretest": "${npm_package_scripts_build} && ${npm_package_scripts_lint}",
-    "test": "node --harmony_arrow_functions test.js",
-    "coverage": "node --harmony_arrow_functions node_modules/.bin/istanbul cover test.js",
+    "test": "node --strong_mode test.js | tap-spec",
+    "coverage": "node --strong_mode node_modules/.bin/istanbul cover test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
   "license": "Unlicense",

@@ -1,20 +1,19 @@
-'use strict';
+'use strong';
 
 const test = require('tape');
-const requireBowerFiles = require('require-bower-files');
 
-let expected = require('./spdx-license-ids.json');
+const expected = require('./spdx-license-ids.json');
 
 function runTest(description, main) {
   test(description, t => {
-    t.plan(1);
     t.deepEqual(main, expected, 'should return an array of SPDX license identifiers.');
+    t.end();
   });
 }
 
 runTest('require(\'spdx-license-ids\')', require('.'));
 
 global.window = {};
-requireBowerFiles({self: true});
+require('./' + require('./bower.json').main);
 
-runTest('window.spdxLicenseIds', window.spdxLicenseIds);
+runTest('window.spdxLicenseIds', global.window.spdxLicenseIds);
