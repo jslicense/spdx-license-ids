@@ -1,41 +1,28 @@
 'use strong';
 
-const assert = require('assert');
-const fs = require('fs');
-
-const eachAsync = require('each-async');
-const got = require('got');
-const rimraf = require('rimraf');
+const {cyan, green} = require('chalk');
+const getSpdxLicenseIds = require('get-spdx-license-ids');
+const loudRejection = require('loud-rejection');
+const rimrafPromise = require('rimraf-promise');
 const stringifyObject = require('stringify-object');
+const writeFileAtomically = require('write-file-atomically');
 
 const pkg = require('./package.json');
 
-got('https://spdx.org/licenses/licenses.json', {json: true}, (gotError, json) => {
-  assert.ifError(gotError);
+loudRejection();
 
-  let array = json.licenses
-    .filter(license => !license.licenseId.endsWith('+'))
-    .map(license => license.licenseId);
-  let files = [
-    {
-      path: pkg.main,
-      contents: JSON.stringify(array, null, '  ')
-    },
-    {
-      path: require('./bower.json').main,
-      contents: `window.spdxLicenseIds = ${stringifyObject(array, {indent: '  '})};`
-    }
-  ];
-
-  rimraf(pkg.name + '*', removeErr => {
-    assert.ifError(removeErr);
-
-    eachAsync(files, (file, index, next) => {
-      console.log('Writing... ' + file.path);
-      fs.writeFile(file.path, file.contents + '\n', next);
-    }, writeErr => {
-      assert.ifError(writeErr);
-      console.log('Build completed.');
-    });
-  });
-});
+rimrafPromise(pkg.name + '*')
+.then(() => getSpdxLicenseIds())
+.then(ids => {
+  return {
+    [pkg.main]: JSON.stringify(ids, null, '  ') + '\n',
+    [require('./bower.json').main]: `window.spdxLicenseIds = ${stringifyObject(ids, {indent: '  '})};\n`
+  };
+})
+.then(files => {
+  return Promise.all(Object.keys(files).map(filename => {
+    console.log('Writing... ' + cyan(filename));
+    return writeFileAtomically(filename, files[filename]);
+  }));
+})
+.then(() => console.log(green('Build completed.')));
