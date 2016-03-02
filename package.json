@@ -5,8 +5,8 @@
   "repository": "shinnn/spdx-license-ids",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "lint": "eslint --config node_modules/@shinnn/eslintrc/rc.json --ignore-path .gitignore .",
     "build": "node --strong_mode --harmony_destructuring build.js",
+    "lint": "eslint --config @shinnn/node --env browser --ignore-path .gitignore .",
     "pretest": "${npm_package_scripts_build} && ${npm_package_scripts_lint}",
     "test": "node --strong_mode test.js | tap-spec",
     "coverage": "node --strong_mode node_modules/.bin/istanbul cover test.js",
@@ -31,14 +31,14 @@
     "client-side"
   ],
   "devDependencies": {
-    "@shinnn/eslintrc": "^1.0.0",
     "each-async": "^1.1.1",
-    "eslint": "^0.24.0",
     "got": "^3.3.0",
     "istanbul": "^0.3.17",
     "require-bower-files": "^2.0.0",
     "rimraf": "^2.4.1",
     "stringify-object": "^2.2.0",
     "tape": "^4.0.0"
+    "@shinnn/eslint-config-node": "^2.0.0",
+    "eslint": "^2.2.0",
   }
 }
