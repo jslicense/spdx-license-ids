@@ -9,8 +9,7 @@
     "lint": "eslint --config @shinnn/node --env browser --ignore-path .gitignore .",
     "pretest": "${npm_package_scripts_build} && ${npm_package_scripts_lint}",
     "test": "node --strong_mode test.js | tap-spec",
-    "coverage": "node --strong_mode node_modules/.bin/istanbul cover test.js",
-    "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
+    "coverage": "node --strong_mode node_modules/.bin/istanbul cover test.js"
   },
   "license": "Unlicense",
   "main": "spdx-license-ids.json",
