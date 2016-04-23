@@ -5,7 +5,7 @@
   "repository": "shinnn/spdx-license-ids",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "build": "node --strong_mode --harmony_destructuring build.js",
+    "build": "node --strong_mode build.js",
     "lint": "eslint --config @shinnn/node --env browser --ignore-path .gitignore .",
     "pretest": "${npm_package_scripts_build} && ${npm_package_scripts_lint}",
     "test": "node --strong_mode test.js | tap-spec",
