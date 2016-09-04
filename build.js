@@ -3,7 +3,7 @@
 const {cyan, green} = require('chalk');
 const getSpdxLicenseIds = require('get-spdx-license-ids');
 const loudRejection = require('loud-rejection');
-const rimrafPromise = require('rimraf-promise');
+const rmfr = require('rmfr');
 const stringifyObject = require('stringify-object');
 const writeFileAtomically = require('write-file-atomically');
 
@@ -11,7 +11,7 @@ const pkg = require('./package.json');
 
 loudRejection();
 
-rimrafPromise(pkg.name + '*')
+rmfr(pkg.name + '*', {glob: true})
 .then(() => getSpdxLicenseIds())
 .then(ids => {
   return {

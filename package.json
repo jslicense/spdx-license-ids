@@ -36,7 +36,7 @@
     "get-spdx-license-ids": "^1.0.0",
     "istanbul": "^0.4.4",
     "loud-rejection": "^1.6.0",
-    "rimraf-promise": "^2.0.0",
+    "rmfr": "^1.0.1",
     "stringify-object": "^2.4.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.0",
