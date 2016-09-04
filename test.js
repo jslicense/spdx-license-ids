@@ -1,4 +1,4 @@
-'use strong';
+'use strict';
 
 const test = require('tape');
 

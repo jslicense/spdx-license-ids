@@ -1,4 +1,4 @@
-'use strong';
+'use strict';
 
 const {cyan, green} = require('chalk');
 const getSpdxLicenseIds = require('get-spdx-license-ids');
