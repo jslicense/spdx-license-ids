@@ -14,7 +14,6 @@
   ],
   "main": "spdx-license-ids-browser.js",
   "moduleType": "globals",
-  "homepage": "https://github.com/shinnn/spdx-license-ids",
   "repository": {
     "type": "git",
     "url": "git://github.com/shinnn/spdx-license-ids.git"
@@ -27,7 +26,6 @@
     "**/.*",
     "*.json",
     "*.js",
-    "bower_components",
     "coverage",
     "node_modules"
   ]
