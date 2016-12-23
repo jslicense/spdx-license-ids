@@ -12,8 +12,8 @@
     "array",
     "oss"
   ],
-  "main": "spdx-license-ids-browser.js",
-  "moduleType": "globals",
+  "main": "module.js",
+  "moduleType": "es6",
   "repository": {
     "type": "git",
     "url": "git://github.com/shinnn/spdx-license-ids.git"

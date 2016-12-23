@@ -1,4 +1,4 @@
-window.spdxLicenseIds = [
+export default [
   'Glide',
   'Abstyles',
   'AFL-1.1',

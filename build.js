@@ -11,18 +11,14 @@ const pkg = require('./package.json');
 
 loudRejection();
 
-rmfr(pkg.name + '*', {glob: true})
+rmfr(`${pkg.files.join(',')}`, {glob: true})
 .then(() => getSpdxLicenseIds())
-.then(ids => {
-  return {
-    [pkg.main]: JSON.stringify(ids, null, '  ') + '\n',
-    [require('./bower.json').main]: `window.spdxLicenseIds = ${stringifyObject(ids, {indent: '  '})};\n`
-  };
-})
-.then(files => {
-  return Promise.all(Object.keys(files).map(filename => {
-    console.log('Writing... ' + cyan(filename));
-    return writeFileAtomically(filename, files[filename]);
-  }));
-})
+.then(ids => ({
+  [pkg.files[0]]: JSON.stringify(ids, null, '  ') + '\n',
+  [pkg.files[1]]: `export default ${stringifyObject(ids, {indent: '  '})};\n`
+}))
+.then(files => Promise.all(Object.keys(files).map(filename => {
+  console.log(`Writing... ${cyan(filename)}`);
+  return writeFileAtomically(filename, files[filename]);
+})))
 .then(() => console.log(green('Build completed.')));

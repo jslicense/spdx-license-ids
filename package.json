@@ -8,13 +8,13 @@
     "build": "node build.js",
     "lint": "eslint --fix --format=codeframe --env=browser --ignore-path .gitignore .",
     "pretest": "${npm_package_scripts_build} && ${npm_package_scripts_lint}",
-    "test": "node test.js | tap-spec",
+    "test": "node test.js",
     "coverage": "node node_modules/.bin/istanbul cover test.js"
   },
   "license": "Unlicense",
-  "main": "spdx-license-ids.json",
   "files": [
-    "spdx-license-ids.json"
+    "index.json",
+    "module.js"
   ],
   "keywords": [
     "spdx",
@@ -25,9 +25,7 @@
     "identifiers",
     "json",
     "array",
-    "oss",
-    "browser",
-    "client-side"
+    "oss"
   ],
   "devDependencies": {
     "@shinnn/eslint-config-node": "^3.0.0",
@@ -38,7 +36,6 @@
     "loud-rejection": "^1.6.0",
     "rmfr": "^1.0.1",
     "stringify-object": "^3.0.0",
-    "tap-spec": "^4.1.1",
     "tape": "^4.6.2",
     "write-file-atomically": "1.0.0"
   },
