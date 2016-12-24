@@ -11,7 +11,7 @@
     "test": "node test.js",
     "coverage": "node node_modules/.bin/istanbul cover test.js"
   },
-  "license": "Unlicense",
+  "license": "CC0-1.0",
   "files": [
     "index.json",
     "module.js"

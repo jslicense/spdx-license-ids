@@ -21,7 +21,7 @@
   "authors": [
     "Shinnosuke Watanabe (https://github.com/shinnn)"
   ],
-  "license": "Unlicense",
+  "license": "CC0-1.0",
   "ignore": [
     "**/.*",
     "*.json",
