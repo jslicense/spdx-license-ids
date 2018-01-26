@@ -1,20 +1,31 @@
 'use strict';
 
-const {join} = require('path');
+const {basename, join} = require('path');
 
-const {green} = require('chalk');
+const {cyan} = require('chalk');
 const {files} = require('./package.json');
 const getSpdxLicenseIds = require('get-spdx-license-ids');
 const loudRejection = require('loud-rejection');
 const rmfr = require('rmfr');
+const {success} = require('log-symbols');
 const writeFileAtomically = require('write-file-atomically');
 
 loudRejection();
 
-(async () => {
-	const filePath = join(__dirname, files[0]);
-	const [ids] = await Promise.all([getSpdxLicenseIds.all(), rmfr(filePath)]);
-	await writeFileAtomically(filePath, `${JSON.stringify(ids, null, '\t')}\n`);
+module.exports = (async () => {
+	const paths = files.map(filename => join(__dirname, filename));
 
-	console.log(green(`Wrote ${filePath}.`));
+	const [[valid, deprecated]] = await Promise.all([
+		getSpdxLicenseIds.both(),
+		...paths.map(path => rmfr(path))
+	]);
+
+	await Promise.all(paths.map(async path => {
+		const data = basename(path) === 'deprecated.json' ? deprecated : valid;
+		await writeFileAtomically(path, `${JSON.stringify(data, null, '\t')}\n`);
+
+		console.log(`${success} Created ${cyan(path)}`);
+	}));
+
+	console.log();
 })();
