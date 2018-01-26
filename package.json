@@ -8,8 +8,7 @@
     "prebuild": "eslint --fix --format=codeframe --env=browser --ignore-path .gitignore .",
     "build": "node build.js",
     "pretest": "npm run-script build",
-    "test": "node test.js",
-    "coverage": "node node_modules/.bin/istanbul cover test.js"
+    "test": "node test.js"
   },
   "license": "CC0-1.0",
   "files": [
@@ -31,7 +30,6 @@
     "chalk": "^2.0.1",
     "eslint": "^4.3.0",
     "get-spdx-license-ids": "^1.1.1",
-    "istanbul": "^0.4.5",
     "loud-rejection": "^1.6.0",
     "rmfr": "^1.0.3",
     "tape": "^4.8.0",
