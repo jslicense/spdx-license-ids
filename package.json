@@ -5,16 +5,15 @@
   "repository": "shinnn/spdx-license-ids",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
+    "prebuild": "eslint --fix --format=codeframe --env=browser --ignore-path .gitignore .",
     "build": "node build.js",
-    "lint": "eslint --fix --format=codeframe --env=browser --ignore-path .gitignore .",
-    "pretest": "${npm_package_scripts_build} && ${npm_package_scripts_lint}",
+    "pretest": "npm run-script build",
     "test": "node test.js",
     "coverage": "node node_modules/.bin/istanbul cover test.js"
   },
   "license": "CC0-1.0",
   "files": [
-    "index.json",
-    "module.js"
+    "index.json"
   ],
   "keywords": [
     "spdx",
@@ -31,11 +30,10 @@
     "@shinnn/eslint-config-node": "^4.0.2",
     "chalk": "^2.0.1",
     "eslint": "^4.3.0",
-    "get-spdx-license-ids": "^1.1.0",
+    "get-spdx-license-ids": "^1.1.1",
     "istanbul": "^0.4.5",
     "loud-rejection": "^1.6.0",
     "rmfr": "^1.0.3",
-    "stringify-object": "^3.2.0",
     "tape": "^4.8.0",
     "write-file-atomically": "^1.0.0"
   },

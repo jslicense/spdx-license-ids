@@ -1,24 +1,20 @@
 'use strict';
 
-const {cyan, green} = require('chalk');
+const {join} = require('path');
+
+const {green} = require('chalk');
+const {files} = require('./package.json');
 const getSpdxLicenseIds = require('get-spdx-license-ids');
 const loudRejection = require('loud-rejection');
 const rmfr = require('rmfr');
-const stringifyObject = require('stringify-object');
 const writeFileAtomically = require('write-file-atomically');
-
-const pkg = require('./package.json');
 
 loudRejection();
 
-rmfr(`${pkg.files.join(',')}`, {glob: true})
-.then(() => getSpdxLicenseIds())
-.then(ids => ({
-  [pkg.files[0]]: JSON.stringify(ids, null, '  ') + '\n',
-  [pkg.files[1]]: `export default ${stringifyObject(ids, {indent: '  '})};\n`
-}))
-.then(files => Promise.all(Object.keys(files).map(filename => {
-  console.log(`Writing... ${cyan(filename)}`);
-  return writeFileAtomically(filename, files[filename]);
-})))
-.then(() => console.log(green('Build completed.')));
+(async () => {
+  const filePath = join(__dirname, files[0]);
+  const [ids] = await Promise.all([getSpdxLicenseIds(), rmfr(filePath)]);
+  await writeFileAtomically(filePath, JSON.stringify(ids, null, '  ') + '\n');
+
+  console.log(green(`Wrote ${filePath}.`));
+})();
