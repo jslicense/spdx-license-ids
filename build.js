@@ -1,16 +1,12 @@
 'use strict';
 
 const {basename, join} = require('path');
+const {writeFile} = require('fs').promises;
 
-const {cyan} = require('chalk');
+const {cyan, green} = require('chalk');
 const {files} = require('./package.json');
 const getSpdxLicenseIds = require('get-spdx-license-ids');
-const loudRejection = require('loud-rejection');
 const rmfr = require('rmfr');
-const {success} = require('log-symbols');
-const writeFileAtomically = require('write-file-atomically');
-
-loudRejection();
 
 module.exports = (async () => {
 	const paths = files.map(filename => join(__dirname, filename));
@@ -22,9 +18,9 @@ module.exports = (async () => {
 
 	await Promise.all(paths.map(async path => {
 		const data = basename(path) === 'deprecated.json' ? deprecated : valid;
-		await writeFileAtomically(path, `${JSON.stringify(data, null, '\t')}\n`);
+		await writeFile(path, `${JSON.stringify(data, null, '\t')}\n`);
 
-		console.log(`${success} Created ${cyan(path)}`);
+		console.log(`${green('[OK]')} Created ${cyan(path)}`);
 	}));
 
 	console.log();
