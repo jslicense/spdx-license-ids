@@ -1,5 +1,4 @@
+if: branch !~ ^v\d
 dist: xenial
-branches:
-  except: /^v\d/
 language: node_js
 node_js: node
