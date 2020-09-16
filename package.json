@@ -8,6 +8,7 @@
 	"scripts": {
 		"build": "node build.js",
 		"pretest": "eslint .",
+		"latest": "node latest.js",
 		"test": "node test.js"
 	},
 	"files": [
