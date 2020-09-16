@@ -2,7 +2,7 @@
 	"name": "spdx-license-ids",
 	"version": "3.0.5",
 	"description": "A list of SPDX license identifiers",
-	"repository": "shinnn/spdx-license-ids",
+	"repository": "jslicense/spdx-license-ids",
 	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
 	"license": "CC0-1.0",
 	"scripts": {
