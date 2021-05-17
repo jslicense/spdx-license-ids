@@ -16,6 +16,9 @@ module.exports = (async () => {
 		...paths.map(path => rmfr(path))
 	]);
 
+	valid.sort();
+	deprecated.sort();
+
 	await Promise.all(paths.map(async path => {
 		const data = basename(path) === 'deprecated.json' ? deprecated : valid;
 		await writeFile(path, `${JSON.stringify(data, null, '\t')}\n`);
