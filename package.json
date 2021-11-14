@@ -27,7 +27,7 @@
 		"oss"
 	],
 	"devDependencies": {
-		"@shinnn/eslint-config": "^6.8.7",
+		"@shinnn/eslint-config": "^7.0.0",
 		"chalk": "^4.1.2",
 		"eslint": "^8.2.0",
 		"get-spdx-license-ids": "^2.1.0",
