@@ -32,7 +32,7 @@
 		"eslint": "^5.10.0",
 		"get-spdx-license-ids": "^2.1.0",
 		"rmfr": "^2.0.0",
-		"tape": "^4.9.1"
+		"tape": "^5.3.1"
 	},
 	"eslintConfig": {
 		"extends": "@shinnn"
