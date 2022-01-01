@@ -15,6 +15,7 @@
 		"deprecated.json",
 		"index.json"
 	],
+	"main": "index.json",
 	"keywords": [
 		"spdx",
 		"license",
