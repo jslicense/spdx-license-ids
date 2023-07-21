@@ -17,9 +17,6 @@ https.get('https://spdx.org/licenses/licenses.json', response => {
 		const index = [];
 		const deprecated = [];
 		for (const {licenseId: id, isDeprecatedLicenseId: isDeprecated} of licenses) {
-			if (id.endsWith('+')) {
-				continue;
-			}
 			if (isDeprecated) {
 				deprecated.push(id);
 			} else {
