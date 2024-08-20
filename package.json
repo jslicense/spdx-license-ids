@@ -8,6 +8,7 @@
 	"scripts": {
 		"build": "node build.js",
 		"latest": "node latest.js",
+		"pretest": "npm run build",
 		"test": "node test.js"
 	},
 	"files": [
@@ -24,8 +25,5 @@
 		"json",
 		"array",
 		"oss"
-	],
-	"devDependencies": {
-		"tape": "^5.6.6"
-	}
+	]
 }
